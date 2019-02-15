@@ -1,4 +1,6 @@
 include ../_mixins/mixin-card
+include ../_mixins/mixin-svg
+include ../_mixins/mixin-primary-button
 
 section
   .container 
@@ -12,3 +14,6 @@ section
             +card('Cambridge English','De er sprogligt adgangsgivende til mange engelske og amerikanske universiteter.')
           .col-sm-12.col-md-4
             +card('Prøver','Du kan tagemange prøver og eksamener på Studieskolen, og du kan tage forberedelseskurser til eksamener.')
+    .row
+      .col-sm-12
+        +primary-button('Se alle')

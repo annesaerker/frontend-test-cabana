@@ -1,0 +1,60 @@
+header {
+  width: 100%;
+  z-index: 100;
+  height: 100px;
+  background-color: #FFFFFF;
+
+  .navbar-logo {
+    height: 6px;
+    width: 195px;
+    position: absolute;
+    margin: 27px 39px 41px 30px;
+
+    img {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .navbar-collapse {
+    display: block;
+    width: calc(100% - 400px - 230px);
+    text-align: right;
+    position: absolute;
+    float: left;
+    top: 37px;
+    margin-bottom: 0px;
+    margin-left: 230px;
+
+   flex-grow: 0 !important;
+
+    ul {
+      margin-bottom: 30px;
+      margin-left: 18px;
+      list-style: none;
+
+      li {
+        color: #000000;
+        font-family: regular;
+        font-size: 16px;
+        line-height: 26px;
+        padding-bottom: 10px;
+
+        a{
+          color: #000000;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+  .navbar-extra {
+    right: 0;
+    position: absolute;
+    flex-direction: row;
+    display: flex;
+  }
+}

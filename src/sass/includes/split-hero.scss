@@ -1,4 +1,13 @@
 .split-hero {
+	height: 700px;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+
+	@media (max-width: 766px) {
+		height: auto;
+	}
+
 	.col-sm-12, .col-md-6 {
 		padding-right: 0;
     padding-left: 0;
@@ -9,10 +18,12 @@
 		position: relative;
     overflow: hidden;
 
-		/*@media (--mq-tablet-horizontal-down) {
-			margin-top: 20px;
-			margin-right: 40px;
-		}*/
+		@media (max-width: 766px) {
+			position: relative;
+			padding: 0px;
+			height: 250px;
+			width: 100%;
+		}
 
 		img {
 			height: calc(100vh - 56px);
@@ -22,16 +33,48 @@
 			object-fit: cover;
 		}
 
-		.speech-bubble-container {
+		.speech-container {
+			padding-bottom: 70px;
 			position: absolute;
 			width: 70%;
-			bottom: 60px;
+			bottom: 114px;
+
+			@media (max-width: 766px) {
+				width: 80%;
+				padding-right: 15px;
+				padding-left: 15px;
+				bottom: 0;
+				padding-bottom: 25px;
+			}
+
+			p {
+				@media (max-width: 766px) {
+					display: none;
+				}
+			}
+			
+			.btn-text {
+				@media (max-width: 766px) {
+					display: block;
+				}
+			}
 
 			&.left {
 				right: 45px;
+				color: #ffff;
+				@media (max-width: 766px) {
+					right: 10%;	
+				}
 
-				.speech-bubble {
+				p {
+					color: #ffff;
+				}
+
+				.speech {
 					background-color: #bd1f44;
+					&:before {
+						border-bottom: 30px solid #bd1f44;
+					}
 					&:after {
 						border-top-color: #bd1f44;
 					}
@@ -40,12 +83,37 @@
 
 			&.right {
 				left: 45px;	
+				@media (max-width: 766px) {
+					left: 10%;	
+				}
 			}
 
-			.speech-bubble {
+			.speech {
 				position: relative;
 				background-color: #ffff;
 				padding: 40px;
+
+				@media (max-width: 766px) {
+					padding: 15px;	
+				}
+
+				&:before {
+					content: "";
+					position: absolute;
+					display: none;
+					width: 0px;
+					height: 0px;
+					border-bottom: 30px solid white;
+					border-right: 0px solid transparent;
+					border-top: 25px solid transparent;
+					border-left: 40px solid transparent;
+					top: -55px;
+					right: 50px;
+
+					@media (max-width: 766px) {
+						display: block;	
+					}
+				}
 			
 				&:after {
 					content: '';
@@ -58,6 +126,10 @@
 					border-left: 40px solid transparent;
 					top: 100%;
 					right: 50px;
+
+					@media (max-width: 766px) {
+						display: none;	
+					}
 				}
 			}
 		}

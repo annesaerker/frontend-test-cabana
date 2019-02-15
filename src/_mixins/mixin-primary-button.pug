@@ -1,0 +1,5 @@
+mixin primary-button(buttonName, link)
+  a.primary-link(href=link, aria-label="Primary button")= buttonName
+    +svgsymbol("arrowright")
+  if block
+    block
