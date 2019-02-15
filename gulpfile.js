@@ -16,6 +16,7 @@ var paths = {
   public: './public/',
   sass: './src/sass/',
   css: './public/css/',
+  js: './public/js/',
   data: './src/_data/'
 };
 
@@ -46,7 +47,7 @@ gulp.task('rebuild', ['pug'], function () {
 /**
  * Wait for pug and sass tasks, then launch the browser-sync Server
  */
-gulp.task('browser-sync', ['sass', 'pug'], function () {
+gulp.task('browser-sync', ['sass', 'pug', 'js'], function () {
   browserSync({
     server: {
       baseDir: paths.public
@@ -75,6 +76,15 @@ gulp.task('sass', function () {
     }));
 });
 
+gulp.task('js', function() {
+  return gulp
+    .src('./src/js/*.js')
+    .pipe(gulp.dest(paths.js))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
+
 /**
  * Watch scss files for changes & recompile
  * Watch .pug files run pug-rebuild then reload BrowserSync
@@ -82,6 +92,7 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
   gulp.watch(paths.sass + '**/*.scss', ['sass']);
   gulp.watch('./src/**/*.pug', ['rebuild']);
+  gulp.watch("./src/js/*.js", ['js']);
 });
 
 // Build task compile sass and pug.
