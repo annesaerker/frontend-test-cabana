@@ -1,0 +1,34 @@
+.quote-slider {
+  margin-bottom: 100px;
+
+  .quote-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+  }
+
+  .speech-bubble-slider {
+    position: absolute;
+    z-index: 10;
+
+    .speech-wrapper {
+      background-color: #FF9A65;
+      padding: 30px 35px 10px 35px;
+    }
+  }
+
+  .image-quote {
+    position: absolute;
+    left: 0;
+    top: 25px;
+
+    img {
+      width: 100%;
+      border: 0;
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+}
