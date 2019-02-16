@@ -23,6 +23,13 @@ body {
   margin-bottom: 100px;
 }
 
+.no-padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 /* ------ Normalize ----- */
 
 *,
@@ -58,6 +65,11 @@ p {
 
 .grey-bg {
   background-color: #F4F4F4;
+}
+
+.red-bg {
+  background-color: #BD1F44;;
+  
 }
 
 .dark-red-bg {

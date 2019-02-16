@@ -1,0 +1,120 @@
+.video {
+  margin-bottom: 170px;
+
+  .quote {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+  }
+
+  .video {
+    position: absolute;
+    right: 0;
+    top: 25px;
+  }
+
+  .quote-conatiner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 440px;
+  }
+
+  .quote-image {
+    position: absolute;
+    left: 0;
+    top: -25px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .owl-carousel {
+    list-style: none;
+    padding: 0;
+  }
+
+  .owl-dots {
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+  }
+
+  .owl-dot {
+    outline:0;
+
+    &.active {
+      span {
+        background-color: #FFFFFF;
+      }
+    }
+
+    span {
+      width: 10px;
+      height: 10px;
+      margin: 5px 7px;
+      background: #D6D6D6;
+      display: block;
+      transition: opacity 200ms ease;
+      border-radius: 30px;
+      background: transparent;
+      border: 1px solid #FFFFFF;
+    }
+  }
+
+
+  .speech-container {
+    top: 90px;
+    position: absolute;
+    width: 100%;
+
+    @media (max-width: 766px) {
+      width: 80%;
+      padding-right: 15px;
+      padding-left: 15px;
+      bottom: 0;
+      padding-bottom: 25px;
+    }
+  
+    .quote-text {
+      font-size: 22px;
+      line-height: 36px;
+      font-family: italic;
+      color: #FFFFFF;
+    }
+      
+    .quote-sender {
+      color: #FFFFFF;
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 0 !important;
+    }
+
+    .speech {
+      position: relative;
+      background-color: #ffff;
+      padding: 40px;
+
+      @media (max-width: 766px) {
+        padding: 15px;	
+      }
+  
+      &:after {
+        content: '';
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        border-top: 30px solid #ffff;
+        border-right: 0px solid transparent;
+        border-bottom: 25px solid transparent;
+        border-left: 40px solid transparent;
+        top: 100%;
+        right: 50px;
+      }
+    }
+  }
+}
