@@ -1,6 +1,27 @@
 .quote-slider {
   margin-bottom: 100px;
 
+  .quote {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+  }
+
+  .image {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .quote-conatiner {
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 400px;
+  }
+
   .quote-image {
     position: absolute;
     left: 0;
@@ -19,8 +40,16 @@
     padding: 0;
   }
 
-  .owl-dot {
+  .owl-dots {
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+  }
 
+  .owl-dot {
+    outline:0;
+    
     &.active {
       span {
         background-color: #FFFFFF;
@@ -44,7 +73,7 @@
   .speech-container {
     padding-bottom: 70px;
     position: absolute;
-    width: 70%;
+    width: 100%;
 
     @media (max-width: 766px) {
       width: 80%;
@@ -65,6 +94,7 @@
       color: #FFFFFF;
       font-size: 14px;
       line-height: 20px;
+      margin-bottom: 0 !important;
     }
 
     .line {
@@ -102,40 +132,18 @@
       @media (max-width: 766px) {
         padding: 15px;	
       }
-
-      &:before {
-        content: "";
-        position: absolute;
-        display: none;
-        width: 0px;
-        height: 0px;
-        border-bottom: 30px solid #FF9A65;
-        border-right: 0px solid transparent;
-        border-top: 25px solid transparent;
-        border-left: 40px solid transparent;
-        top: -55px;
-        right: 50px;
-
-        @media (max-width: 766px) {
-          display: block;	
-        }
-      }
   
       &:after {
-        content: '';
         position: absolute;
+        content: "";
         width: 0px;
         height: 0px;
         border-top: 30px solid #FF9A65;
-        border-right: 0px solid transparent;
+        border-right: 40px solid transparent;
         border-bottom: 25px solid transparent;
-        border-left: 40px solid transparent;
-        top: 100%;
-        right: 50px;
-
-        @media (max-width: 766px) {
-          display: none;	
-        }
+        border-left: 0px solid transparent;
+        bottom: -54px;
+        left: 50px;
       }
     }
   }
