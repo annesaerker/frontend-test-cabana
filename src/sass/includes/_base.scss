@@ -15,6 +15,14 @@ body {
   margin: 0;
 }
 
+.no-padding-bottom {
+  padding-bottom: 0 !important;
+}
+
+.margin-bottom {
+  margin-bottom: 100px;
+}
+
 /* ------ Normalize ----- */
 
 *,
