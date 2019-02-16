@@ -101,38 +101,3 @@ ul {
 }
 
 
-/******* see more buttons *******/
-.btn {
-  display: flex;
-  position: relative;
-  padding: 0 !important;
-  text-align: left !important;
-  width: 100px;
-  height: 45px;
-
-  .btn-text {
-    position: absolute;
-    color: #DD1C48;
-    font-size: 14px;
-    margin-bottom: 0;
-    bottom: 6px;
-  }
-
-  &:after {
-    position: absolute;
-    width: 100px;
-    height: 1px;
-    background: red;
-    content: "";
-    bottom: 0;
-    left: 0;
-    transition: width 0.25s ease-in-out;
-  }
-
-  &:hover{
-    &:after{
-      width: 60px;
-      transition: width 0.25s ease-in-out;
-    }
-  }
-}

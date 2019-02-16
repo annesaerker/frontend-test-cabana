@@ -1,3 +1,5 @@
+include ../_mixins/mixin-secondary-button
+
 mixin card(cardTitle, text)
   .card
     a(href="")
@@ -9,8 +11,7 @@ mixin card(cardTitle, text)
         if text
           p= text
 
-        .btn
-          p.btn-text Se mere
+      +secondary-button('Se mere')
 
   if block
     block

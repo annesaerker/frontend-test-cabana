@@ -1,3 +1,5 @@
+include ../_mixins/mixin-secondary-button
+
 section.dark-white-bg
   .text-banner
     .container
@@ -10,5 +12,4 @@ section.dark-white-bg
               | I dag underviser Studieskolen årligt mere end 8.000 professionelle, expats og private i mere end 30 sprog.
       .row
         .col-sm-12
-          .btn
-            p.btn-text Se mere
+          +secondary-button('Se mere')

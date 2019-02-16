@@ -1,3 +1,5 @@
+include ../_mixins/mixin-secondary-button
+
 section.no-padding-bottom.margin-bottom.red-bg
   .video
     .container
@@ -17,5 +19,4 @@ section.no-padding-bottom.margin-bottom.red-bg
                   | Lær grammatik med Thomas Skov - se seks små videoer om danskgrammatik
                   | og test dig selv. I videoerne lærer Thomas Skov om ordklasser, subject (grundled),
                   | verballed (udsagnsled), object (genstandsled), ordforråd og udtale.
-              .btn
-                p.btn-text Læs mere
+              +secondary-button('Læs mere')
