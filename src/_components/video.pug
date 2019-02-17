@@ -7,9 +7,19 @@ section.no-padding-bottom.margin-bottom.red-bg
         .col-sm-12
           h1.section-title Grammatik
       .row.quote-conatiner
-        .col-sm-12.col-md-8.video
+        .col-sm-12.col-md-8.video.youtube
           .quote-image
-            img(src="https://images.unsplash.com/photo-1549987506-72e5fcb6163c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1653&q=80" alt="placeholder")
+            button(type="button" class="bmd-modalButton" data-toggle="modal" data-bmdSrc="https://www.youtube.com/embed/GEvrlIKXN0U" data-bmdWidth="640" data-bmdHeight="480" data-target="#myModal"  data-bmdVideoFullscreen="true")
+              img(src="https://images.unsplash.com/photo-1549987506-72e5fcb6163c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1653&q=80" alt="placeholder")
+            .modal.fade#myModal
+              .close-button
+                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                  span(aria-hidden="true") &times;
+              .modal-dialog.modal-lg.modal-dialog-centered
+                .modal-content.bmd-modalContent
+                  .modal-body
+                    .embed-responsive.embed-responsive-16by9
+                      iframe.embed-responsive-item(frameborder="0")
         .col-sm-12.col-md-6.quote
           .speech-container
             .speech
