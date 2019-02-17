@@ -1,2 +1,31 @@
 header
-  h1= welcome
+  nav.navbar
+    .navbar-container
+      .row
+        .col-sm-6.col-md-3
+          a.navbar-logo(href='/')
+            img(src="/assets/images/logo.png" alt="placeholder")
+        .col-sm-6.col-md-6
+          ul.navbar-nav
+            li.nav-item.active
+              a.nav-link(href="#") Lær dansk
+            li.nav-item
+              a.nav-link(href="#") Fremmedsprog
+            li.nav-item.active
+              a.nav-link(href="#") Business sprogkurser
+            li.nav-item.active
+              a.nav-link(href="#") Om studieskolen
+        .col-sm-6.col-md-3
+          nav.menu-secondary
+            ul.navlist
+              li.menu-item
+                span en
+              li.menu-item
+                a.menu-link(href="", aria-label="open search", data-menu="search")
+                  svg#Layer_1(style="enable-background:new 0 0 48 48;" version="1.1" viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink")
+                    path(d="M46.7,45.3L33.4,32c2.9-3.2,4.6-7.4,4.6-12c0-9.9-8.1-18-18-18C10.1,2,2,10.1,2,20c0,9.9,8.1,18,18,18c4.6,0,8.8-1.8,12-4.6  l13.3,13.3L46.7,45.3z M4,20c0-8.8,7.2-16,16-16s16,7.2,16,16s-7.2,16-16,16S4,28.8,4,20z")
+              li.menu-item
+                a.menu-link.burger-link(href="", aria-label="open menu", data-menu="submenu-burger")
+                  .burger-line
+                  .burger-line
+                  .burger-line

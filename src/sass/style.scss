@@ -1,6 +1,7 @@
-@import "includes/base";
+@import "includes/global";
+@import "includes/variables";
 @import "includes/buttons";
-@import "includes/menu";
+@import "includes/header";
 @import "includes/split-hero";
 @import "includes/text-banner";
 @import "includes/card";
@@ -9,12 +10,3 @@
 @import "includes/video";
 @import "includes/divider";
 @import "includes/footer";
-
-header {
-  h1 {
-    font-weight: 300;
-    text-align: center;
-    font-size: 60px;
-    margin-top: 180px;
-  }
-}
