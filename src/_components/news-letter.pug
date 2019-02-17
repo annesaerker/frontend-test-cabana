@@ -1,19 +1,25 @@
-section.grey-bg
+include ../_mixins/mixin-card
+include ../_mixins/mixin-primary-button
+
+section.no-padding-bottom.grey-bg
   .news-letter
     .container
       .row
         .col-sm-12
           h1.section-title Nyhedsbrev
       .row
-        .col-sm-12.col-md-6
-          .text-box
-            h2 Tilmeld nyhedsbrev
-            p 
-              | Vil du være sikker på, at du er opdateret med vores spændene kurser og arrangementer?
-              | Så abonner på vores nyhedsbrev. Vi sender kun, når vi har noget at fortælle.
-        .col-sm-12.col-md-6
-          .news-letter-form.dark-red-bg
-            form(action='/', method='POST')
-              input(type='text', name='name', value='', placeholder='Navn*')
-              input(type='text', name='email', value='', placeholder='E-mail*')
-              button(type='submit', value='Submit') Tilmeld
+        .col-sm-12
+          .news-letter-container
+            .col-sm-12.col-md-6
+              .box.left
+                h2 Tilmeld nyhedsbrev
+                p 
+                  | Vil du være sikker på, at du er opdateret med vores spændene kurser og arrangementer?
+                  | Så abonner på vores nyhedsbrev. Vi sender kun, når vi har noget at fortælle.
+            .col-sm-12.col-md-6
+              .box.right.dark-red-bg
+                h2 Din information
+                form(action='/', method='POST')
+                  input(type='text', name='name', value='', placeholder='Navn*')
+                  input(type='text', name='email', value='', placeholder='E-mail*')
+                  +primary-button('Tilmeld')
