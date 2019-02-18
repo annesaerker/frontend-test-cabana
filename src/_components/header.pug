@@ -7,14 +7,41 @@ header
             img(src="/assets/images/logo.png" alt="placeholder")
         .col-sm-6.col-md-6
           ul.navbar-nav
-            li.nav-item.active
-              a.nav-link(href="#") Lær dansk
             li.nav-item
-              a.nav-link(href="#") Fremmedsprog
-            li.nav-item.active
-              a.nav-link(href="#") Business sprogkurser
-            li.nav-item.active
-              a.nav-link(href="#") Om studieskolen
+              .dropdown.show
+                button.btn(type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                  | Lær dansk
+                .dropdown-menu(aria-labelledby="dropdownMenuLink")
+                  a.dropdown-item(href="#") Kurser
+                  a.dropdown-item(href="#") Tilmelding
+                  a.dropdown-item(href="#") Prøver
+                  a.dropdown-item(href="#") Praktisk information
+                  a.dropdown-item(href="#") Om danskundervisning
+                  a.dropdown-item(href="#") Spørgsmål
+            li.nav-item
+              .dropdown.show
+                a.btn(href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                  | Fremmedsprog
+                .dropdown-menu(aria-labelledby="dropdownMenuLink")
+                  a.dropdown-item(href="#") Link
+                  a.dropdown-item(href="#") Link
+                  a.dropdown-item(href="#") Link
+            li.nav-item
+              .dropdown.show
+                a.btn(href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                  | Business sprogkurser
+                .dropdown-menu(aria-labelledby="dropdownMenuLink")
+                  a.dropdown-item(href="#") Link
+                  a.dropdown-item(href="#") Link
+                  a.dropdown-item(href="#") Link
+            li.nav-item
+              .dropdown.show
+                a.btn(href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                  | Om studieskolen
+                .dropdown-menu(aria-labelledby="dropdownMenuLink")
+                  a.dropdown-item(href="#") Link
+                  a.dropdown-item(href="#") Link
+                  a.dropdown-item(href="#") Link
         .col-sm-6.col-md-3.secondary-container
           nav.menu-secondary
             ul.navlist

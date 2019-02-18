@@ -9,6 +9,10 @@ $(document).ready(function() {
     autoPlay: 5000,
     stopOnHover: true
   });
+
+  $('.dropdown').on('click', function(){
+    $(this).addClass('line');
+  });
 });
 
 
@@ -46,8 +50,6 @@ $(document).ready(function() {
 })(jQuery);
 
 
-
-
 jQuery(document).ready(function(){
-jQuery("#myModal").bmdIframe();
+  jQuery("#myModal").bmdIframe();
 });

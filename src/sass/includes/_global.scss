@@ -57,6 +57,10 @@ p {
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none !important;
+}
+
 /* ------ Colored backgrounds ----- */
 .dark-red-bg {
   background-color: $color-dark-red;
