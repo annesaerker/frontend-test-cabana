@@ -12,20 +12,23 @@ nav {
     height: 100%;
   }
 
-  .conatainer {
-    margin: 0;
-    padding: 0;
-  }
-
   .navbar-brand {
     width: 195px;
     position: absolute; 
+    top: 12px;
 
     img {
-      position: absolute;
       width: 100%;
-      top: -10px;
     }
+  }
+
+  ul {
+    height: 30px;
+  }
+
+  .navbar-toggler {
+    position: absolute;
+    right: 0;
   }
 
   .dropdown {
@@ -84,6 +87,18 @@ nav {
     flex-direction: row;
     justify-content: flex-end;
 
+    @media only screen and (max-width: 991px) {
+      flex-direction: column;
+      right: 0;
+      height: auto;
+    }
+
+    .btn{
+      &:hover {
+        color: $color-red;
+      }
+    }
+
     .nav-link {
       margin: 0 14px;
       color: #000000;
@@ -107,6 +122,10 @@ nav {
   justify-content: flex-end;
   list-style-type: none;
   padding: 0 30px 0 0;
+
+  @media only screen and (max-width: 991px) {
+    flex-direction: column;
+  }
 
   .nav-item {
     padding-left: 40px;
@@ -145,7 +164,7 @@ nav {
     text-transform: uppercase;
 
     &:hover {
-      color: red;
+      color: $color-red;
     }
   }
 
