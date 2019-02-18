@@ -91,6 +91,24 @@ a:hover {
 
 .white-bg {
   background-color: $color-white;
+
+  h1 {
+    color: $color-dark-red !important;
+  }
+
+  p {
+    color: $color-black !important;
+  }
+
+  .secondary-btn {
+    .btn-text {
+      color: $color-red !important; 
+    }
+
+    &:after {
+      background-color: $color-red !important; 
+    }
+  }
 }
 
 .red-bg {

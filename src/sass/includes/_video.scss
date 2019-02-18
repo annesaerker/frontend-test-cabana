@@ -2,24 +2,56 @@
 .video {
   margin-bottom: 170px;
 
+  @media only screen and (max-width: 575px) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 0;
+    padding-bottom: 70px;
+  }
+
+  .video__conatiner{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 440px;
+
+    @media only screen and (max-width: 767px) {
+      height: 100%;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      height: 540px;
+    }
+
+  }
+
   .quote {
     position: absolute;
     z-index: 10;
     left: 0;
     top: 0;
+
+    @media only screen and (max-width: 767px) {
+      position: relative;
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 
-  .video {
+  .image {
     position: absolute;
     right: 0;
     top: 25px;
-  }
 
-  .quote-conatiner {
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 440px;
+    @media only screen and (max-width: 767px) {
+      position: relative;
+      top: 0;
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 
   .quote-image {
@@ -27,26 +59,52 @@
     left: 0;
     top: -25px;
 
+    @media only screen and (max-width: 767px) {
+      position: relative;
+      top: 0;
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      top: 150px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+      top: 40px;
+    }
+
+    button {
+      border: none;
+      padding: 0;
+    }
+
+    svg {
+      position: absolute;
+      transform: translateY(-50%) translatex(-50%);
+      top: 50%;
+      position: absolute;
+      margin-left: 0%;
+      padding: 0;
+      z-index: 15;
+      width: 100px;
+      transition: 0.25s ease-in-out;
+    }
+
+    &:hover {
+
+      svg {
+        width: 120px;
+        height: 120px;
+        transition: 0.25s ease-in-out;
+      }
+      
+    }
+
     img {
       width: 100%;
       object-fit: cover;
     }
 
-    button {
-      padding: 0;
-      border: 0;
-    }
-
-    .video__svg {
-
-      svg {
-        position: absolute;
-        height: 80px;
-        top: 40%;
-        left: 40%;
-        width: 80px;
-      }
-    }
   }
 
   .speech-container {
@@ -54,19 +112,29 @@
     position: absolute;
     width: 100%;
 
-    @media (max-width: 766px) {
-      width: 80%;
-      padding-right: 15px;
-      padding-left: 15px;
-      bottom: 0;
-      padding-bottom: 25px;
+    @media only screen and (max-width: 767px) {
+      position: relative;
     }
+
+    @media only screen and (max-width: 991px) {
+			left: 0;
+    }
+    
+    @media only screen and (max-width: 1199px) {
+      top: 0;
+    }
+
   
     .quote-text {
       font-size: 22px;
       line-height: 36px;
       font-family: italic;
       color: #FFFFFF;
+
+      @media only screen and (max-width: 767px) {
+        font-size: 16px;
+        line-height: 22px;
+      }
     }
       
     .quote-sender {
@@ -74,11 +142,14 @@
       font-size: 14px;
       line-height: 20px;
       margin-bottom: 0 !important;
+
+      @media only screen and (max-width: 767px) {
+        font-size: 12px;
+      }
     }
 
     .speech {
       position: relative;
-      background-color: #ffff;
       padding: 40px;
 
       @media (max-width: 766px) {
@@ -90,7 +161,7 @@
         position: absolute;
         width: 0px;
         height: 0px;
-        border-top: 30px solid #ffff;
+        border-top: 30px solid $color-white;
         border-right: 0px solid transparent;
         border-bottom: 25px solid transparent;
         border-left: 40px solid transparent;
@@ -103,6 +174,16 @@
 
 .modal {
   background-color: rgba(102,0,41,0.5);
+
+  .close {
+    color: #FFFFFF;
+    text-shadow: none;
+    font-size: 50px;
+    font-weight: 200;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+  }
 }
 
 .modal-body {
