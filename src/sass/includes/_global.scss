@@ -3,11 +3,12 @@
 
 /* ------ Fonts ----- */
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 
 /* ------ Typography ----- */
 
 body {
-  font-family: 'Raleway', Arial, sans-serif, ;
+  font-family: 'Roboto', sans-serif;
   color: #555;
   font-size: 100%;
   line-height: 1.5;
@@ -16,27 +17,48 @@ body {
 }
 
 h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500 !important;
+  font-size: 40px !important;
+  color: $color-black;
+  line-height: 50px !important;
 
+  &.section-title {
+    margin-bottom: 30px !important;
+    color: $color-dark-red;
+    font-size: 22px !important;
+    line-height: 36px !important;
+  }
 }
 
 h2 {
-  margin-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 15px !important;
   text-decoration: none;
   color: $color-black;
-  font-size: 26px;
-  line-height: 34px;
+  font-size: 26px !important;
+  line-height: 34px !important;
 }
 
 p {
+  font-family: 'Roboto', sans-serif;
   margin-bottom: 10px;
   color: $color-black;
   font-size: 16px;
   line-height: 26px;
 }
 
+a:hover {
+  text-decoration: none !important;
+}
+
 /* ------ Padding & margins ----- */
 .no-padding-bottom {
   padding-bottom: 0 !important;
+}
+
+.no-padding-top {
+  padding-top: 0 !important;
 }
 
 .margin-bottom {
@@ -67,8 +89,23 @@ p {
   color: $color-white;
 }
 
+.white-bg {
+  background-color: $color-white;
+}
+
 .red-bg {
   background-color: $color-red;
+
+  h1, p {
+    color: $color-white;
+    font-weight: 200 !important;
+  }
+
+  .secondary-btn {
+    &:after {
+      background-color: $color-white;
+    }
+  }
 }
 
 .peach-bg {
@@ -89,17 +126,8 @@ section {
   width: 100%;
   padding-top: 70px;
   padding-bottom: 70px;
-
-  .section-title {
-    margin-bottom: 30px;
-    color: $color-dark-red;
-    font-size: 22px;
-    line-height: 36px;
-  }
 }
 
 ul {
   margin-bottom: 0 !important;
 }
-
-

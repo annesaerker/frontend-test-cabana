@@ -1,6 +1,5 @@
 /* ------ Split hero ----- */
-.split-hero {
-	height: 700px;
+.splithero {
 	width: 100%;
 	overflow: hidden;
 	position: relative;
@@ -27,18 +26,18 @@
 		}
 
 		img {
-			height: calc(100vh - 56px);
+			height: calc(100vh - 100px);
 			width: 100%;
 			border: 0;
 			display: block;
 			object-fit: cover;
 		}
 
-		.speech-container {
+		.splithero__speech__container {
 			padding-bottom: 70px;
 			position: absolute;
 			width: 70%;
-			bottom: 114px;
+			bottom: 0;
 
 			@media (max-width: 766px) {
 				width: 80%;
@@ -71,8 +70,7 @@
 					color: #ffff;
 				}
 
-				.speech {
-					background-color: #bd1f44;
+				.splithero__speech {
 					&:before {
 						border-bottom: 30px solid #bd1f44;
 					}
@@ -89,9 +87,8 @@
 				}
 			}
 
-			.speech {
+			.splithero__speech {
 				position: relative;
-				background-color: #ffff;
 				padding: 40px;
 
 				@media (max-width: 766px) {
