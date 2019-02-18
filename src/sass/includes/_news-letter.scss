@@ -1,17 +1,7 @@
 /* ------ News letter ----- */
 .newsletter {
 
-  .news-letter-container {
-    display: flex;
-    flex-direction: row;
-
-    .col-sm-12 ,.col-md-6 {
-      padding-right: 0 !important;
-      padding-left: 0 !important;
-    }
-  }
-
-  .box {
+  .newsletter__box {
     padding: 40px;
     height: 100%;
 
@@ -32,92 +22,77 @@
       color: #ffff;
     }
   }
-}
 
-.primary-btn {
-  padding-top: 50px;
-
-  .primary-link {
-    background-color: #ffff;
-    color: #BD1F44 !important;
-
-    svg {
-      fill: #BD1F44 !important;
-    }
-  }
-
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-
-  .form-group {
-    height: 65px;
-  }
-
-  input[type="text"], input[type="email"] {
-    color: $color-white;
-    width: 100%;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
-
-  .has-error input[type="text"], 
-  .has-error input[type="email"] {
-    border-bottom: 1px solid $color-red;
-  }
-
-  li {
-    color: $color-red;
-  }
-
-  .submit-container {
-    position: absolute;
-    bottom: 0;
-  }
-
-  .submit-btn {
-    justify-content: center;
-    width: 170px;
-    position: relative;
+  form {
     display: flex;
-    height: 58px;
-    border: none;
-    padding-right: 20px;
-    letter-spacing: 2px;
-    box-sizing: border-box;
-    font-size: 14px;
-    font-weight: 200;
-    text-decoration: none;
-    transition: background-color 0.3s cubic-bezier(0.5, 0, 0.5, 1);
-    cursor: pointer;
-    background-color: #fff;
+    flex-direction: column;
 
-    .submit {
+    .form-group {
+      height: 65px;
+    }
+
+    input[type="text"], input[type="email"] {
+      color: $color-white;
+      width: 100%;
+      font-family: 'Roboto', sans-serif;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .has-error input[type="text"], 
+    .has-error input[type="email"] {
+      border-bottom: 2px solid $color-red;
+    }
+
+    li {
       color: $color-red;
     }
-    
-    .svg-arrowright {
+
+    .submit-container {
       position: absolute;
-      right: 30px;
-      top: 16px;
-      
-      svg {
-        height: 15px;
-        width: 15px;
-        fill: $color-red !important;
-        transition: margin-right 0.25s ease-in-out;
-      }
+      bottom: 0;
     }
-    
-    &:hover {
-      svg{
-        margin-right: -10px;
-        transition: margin-right 0.25s ease-in-out;
+
+    .submit-btn {
+      justify-content: center;
+      width: 170px;
+      position: relative;
+      display: flex;
+      height: 58px;
+      border: none;
+      padding-right: 20px;
+      letter-spacing: 2px;
+      box-sizing: border-box;
+      font-size: 14px;
+      font-weight: 200;
+      text-decoration: none;
+      transition: background-color 0.3s cubic-bezier(0.5, 0, 0.5, 1);
+      cursor: pointer;
+      background-color: #fff;
+
+      .submit {
+        color: $color-red;
       }
-    }
       
+      .svg-arrowright {
+        position: absolute;
+        right: 30px;
+        top: 16px;
+        
+        svg {
+          height: 15px;
+          width: 15px;
+          fill: $color-red !important;
+          transition: margin-right 0.25s ease-in-out;
+        }
+      }
+      
+      &:hover {
+        svg{
+          margin-right: -10px;
+          transition: margin-right 0.25s ease-in-out;
+        }
+      }  
+    }
   }
 }
