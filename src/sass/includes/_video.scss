@@ -31,6 +31,22 @@
       width: 100%;
       object-fit: cover;
     }
+
+    button {
+      padding: 0;
+      border: 0;
+    }
+
+    .video__svg {
+
+      svg {
+        position: absolute;
+        height: 80px;
+        top: 40%;
+        left: 40%;
+        width: 80px;
+      }
+    }
   }
 
   .speech-container {

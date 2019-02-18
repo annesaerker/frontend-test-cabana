@@ -110,7 +110,8 @@ nav {
 
   svg {
     transform: scaleX(-1);
-    width: 30px;
+    width: 25px;
+    margin-left: 20px;
   }
 }
 
@@ -133,6 +134,11 @@ nav {
     z-index: 120;
 
     &:hover {
+      
+      span {
+        color: $color-red;
+      }
+
       .burger-line {
         &:nth-child(2) {
           transform: translateX(0) translateY(9px) scaleX(1);
@@ -162,10 +168,6 @@ nav {
     font-size: 12px;
     line-height: 14px;
     text-transform: uppercase;
-
-    &:hover {
-      color: $color-red;
-    }
   }
 
 

@@ -2,6 +2,11 @@
 .quote-slider {
   margin-bottom: 170px;
 
+  @media only screen and (max-width: 575px) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
   .quote {
     position: absolute;
     z-index: 10;
@@ -26,6 +31,10 @@
     position: absolute;
     left: 0;
     top: -25px;
+
+    @media only screen and (max-width: 1199px) {
+      top: 40px;
+    }
 
     img {
       width: 100%;
@@ -73,19 +82,25 @@
     position: absolute;
     width: 100%;
 
-    @media (max-width: 766px) {
-      width: 80%;
-      padding-right: 15px;
-      padding-left: 15px;
-      bottom: 0;
-      padding-bottom: 25px;
+    @media only screen and (max-width: 991px) {
+			left: 0;
     }
+    
+    @media only screen and (max-width: 1199px) {
+      top: 0;
+    }
+
   
     .quote-text {
       font-size: 22px;
       line-height: 36px;
       font-family: italic;
       color: #FFFFFF;
+
+      @media only screen and (max-width: 767px) {
+        font-size: 16px;
+        line-height: 22px;
+      }
     }
       
     .quote-sender {
@@ -93,6 +108,10 @@
       font-size: 14px;
       line-height: 20px;
       margin-bottom: 0 !important;
+
+      @media only screen and (max-width: 767px) {
+        font-size: 12px;
+      }
     }
 
     .line {
