@@ -40,7 +40,29 @@
   .secondary-btn {
     margin-left: 40px;
   }
+
+  .img-lg {
+    position: relative;
+
+    .img-xs {
+      position: absolute;
+      bottom: -20px;
+      right: 20px;
+      
+      img {
+        border-radius: 50%;
+        height: 45px;
+        width: 45px;
+      }
+  
+    }
+
+  }
+
+
 }
+
+
 
 .cards {
   display: flex;

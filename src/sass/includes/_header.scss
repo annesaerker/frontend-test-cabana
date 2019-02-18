@@ -8,6 +8,7 @@ header {
   .navbar {
     z-index: 10;
     padding: 30px;
+    height: 100%;
   }
 
   .conatainer {
@@ -28,10 +29,6 @@ header {
 
   .dropdown {
 
-    :after {
-      display: none;
-    }
-
     &.show {
       &.line:after {
         position: absolute;
@@ -39,15 +36,16 @@ header {
         height: 4px;
         background: red;
         content: "";
-        top: -30px;
+        top: -35px;
         left: 0;
         transition: width 0.25s ease-in-out;
       }
     }
 
-    button:focus {
-      outline: 0 !important;
-    }
+    .btn:focus,.btn:active {
+      outline: none !important;
+      box-shadow: none;
+    }  
 
     .btn {
       position: relative;
@@ -62,7 +60,7 @@ header {
       width: 250px;
       border: 0;
       border-radius: 0;
-      top: 68px;
+      top: 65px;
       padding: 30px;
       margin: 0;
       left: -15px;
@@ -117,6 +115,7 @@ nav.menu-secondary {
 
     .menu-item {
       padding-left: 40px;
+      cursor: pointer;
     }
   }
 
@@ -152,6 +151,7 @@ nav.menu-secondary {
         position: absolute;
         right: 30px;
         top: 5px;
+      
       }
 
       &:hover {
@@ -184,7 +184,7 @@ nav.menu-secondary {
           transform: translateX(0) translateY(18px) scaleX(0.5);
         }
 
-        .active-menu & {
+        &:hover {
           &:nth-child(1) {
             transform: rotate(45deg) translateX(-4px) translateY(-14px);
           }
