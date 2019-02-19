@@ -1,61 +1,62 @@
-header
-  nav.navbar
-    .navbar-container
-      .row
-        .col-sm-6.col-md-3
-          a.navbar-logo(href='/')
-            img(src="/assets/images/logo.png" alt="placeholder")
-        .col-sm-6.col-md-6
-          ul.navbar-nav
-            li.nav-item
-              .dropdown.show
-                a.btn(href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-                  | Lær dansk
-                .dropdown-menu(aria-labelledby="dropdownMenuLink")
-                  a.dropdown-item(href="#") Kurser
-                  a.dropdown-item(href="#") Tilmelding
-                  a.dropdown-item(href="#") Prøver
-                  a.dropdown-item(href="#") Praktisk information
-                  a.dropdown-item(href="#") Om danskundervisning
-                  a.dropdown-item(href="#") Spørgsmål
-            li.nav-item
-              .dropdown.show
-                a.btn(href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-                  | Fremmedsprog
-                .dropdown-menu(aria-labelledby="dropdownMenuLink")
-                  a.dropdown-item(href="#") Link
-                  a.dropdown-item(href="#") Link
-                  a.dropdown-item(href="#") Link
-            li.nav-item
-              .dropdown.show
-                a.btn(href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-                  | Business sprogkurser
-                .dropdown-menu(aria-labelledby="dropdownMenuLink")
-                  a.dropdown-item(href="#") Link
-                  a.dropdown-item(href="#") Link
-                  a.dropdown-item(href="#") Link
-            li.nav-item
-              .dropdown.show
-                a.btn(href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-                  | Om studieskolen
-                .dropdown-menu(aria-labelledby="dropdownMenuLink")
-                  a.dropdown-item(href="#") Link
-                  a.dropdown-item(href="#") Link
-                  a.dropdown-item(href="#") Link
-        .col-sm-6.col-md-3.secondary-container
-          nav.menu-secondary
-            ul.navlist
-              li.menu-item
-                span English
-              li.menu-item
-                a.menu-link(href="", aria-label="open search", data-menu="search")
-                  span Søg
-                  svg#Layer_1(style="enable-background:new 0 0 48 48;" version="1.1" viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink")
-                    path(d="M46.7,45.3L33.4,32c2.9-3.2,4.6-7.4,4.6-12c0-9.9-8.1-18-18-18C10.1,2,2,10.1,2,20c0,9.9,8.1,18,18,18c4.6,0,8.8-1.8,12-4.6  l13.3,13.3L46.7,45.3z M4,20c0-8.8,7.2-16,16-16s16,7.2,16,16s-7.2,16-16,16S4,28.8,4,20z")
-              li.menu-item
-                a.menu-link.burger-link(href="", aria-label="open menu", data-menu="submenu-burger")
-                  span Mere
-                  .burger
-                    .burger-line
-                    .burger-line
-                    .burger-line
+nav.navbar.navbar-expand-lg
+  a.navbar-brand(href="#")
+    img(src="/assets/images/logo.png" alt="placeholder")
+  button.navbar-toggler(type="button" data-toggle="collapse" data-target="" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation")
+    .burger
+      .burger-line
+      .burger-line
+      .burger-line
+  div.collapse.navbar-collapse
+    ul.navbar-nav
+      li.nav-item
+        .dropdown.show
+          a.btn(href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+            | Lær dansk
+          .dropdown-menu(aria-labelledby="dropdownMenuLink")
+            a.dropdown-item(href="#") Kurser
+            a.dropdown-item(href="#") Tilmelding
+            a.dropdown-item(href="#") Prøver
+            a.dropdown-item(href="#") Praktisk information
+            a.dropdown-item(href="#") Om danskundervisning
+            a.dropdown-item(href="#") Spørgsmål
+      li.nav-item
+        .dropdown.show
+          a.btn(href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+            | Fremmedsprog
+          .dropdown-menu(aria-labelledby="dropdownMenuLink")
+            a.dropdown-item(href="#") Link
+            a.dropdown-item(href="#") Link
+            a.dropdown-item(href="#") Link
+      li.nav-item
+          .dropdown.show
+            a.btn(href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+              | Business sprogkurser
+            .dropdown-menu(aria-labelledby="dropdownMenuLink")
+              a.dropdown-item(href="#") Link
+              a.dropdown-item(href="#") Link
+              a.dropdown-item(href="#") Link
+      li.nav-item
+        .dropdown.show
+          a.btn(href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+            | Om studieskolen
+          .dropdown-menu(aria-labelledby="dropdownMenuLink")
+            a.dropdown-item(href="#") Link
+            a.dropdown-item(href="#") Link
+            a.dropdown-item(href="#") Link
+    ul.navbar__secondary
+      li.nav-item
+        span English
+      li.nav-item
+        a.search-toggle.menu-link(href="", aria-label="open search", data-menu="search" data-selector=".collapse")
+          span Søg
+          svg#Layer_1(style="enable-background:new 0 0 48 48;" version="1.1" viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink")
+            path(d="M46.7,45.3L33.4,32c2.9-3.2,4.6-7.4,4.6-12c0-9.9-8.1-18-18-18C10.1,2,2,10.1,2,20c0,9.9,8.1,18,18,18c4.6,0,8.8-1.8,12-4.6  l13.3,13.3L46.7,45.3z M4,20c0-8.8,7.2-16,16-16s16,7.2,16,16s-7.2,16-16,16S4,28.8,4,20z")
+      li.nav-item
+        a.menu-link.burger-link(href="", aria-label="open menu", data-menu="submenu-burger")
+          span Mere
+          .burger
+            .burger-line
+            .burger-line
+            .burger-line
+    form.search-box(action="")
+      input.text.search-input(type="text" placeholder="Skriv for at søge og tryk enter")
