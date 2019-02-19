@@ -14,12 +14,12 @@
     background-color: transparent;
     border: 0;
     outline: 0;
-    border-bottom: 2px solid #ffff;
+    border-bottom: 2px solid $color-white;
     padding-bottom: 10px;
     padding-top: 10px;
 
     &::placeholder{
-      color: #ffff;
+      color: $color-white;
     }
   }
 

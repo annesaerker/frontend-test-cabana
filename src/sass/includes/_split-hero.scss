@@ -61,21 +61,21 @@
 
 			&.left {
 				right: 45px;
-				color: #ffff;
+				color: $color-white;
 				@media (max-width: 766px) {
 					right: 10%;	
 				}
 
 				p {
-					color: #ffff;
+					color: $color-white;
 				}
 
 				.splithero__speech {
 					&:before {
-						border-bottom: 30px solid #bd1f44;
+						border-bottom: 30px solid $color-red;
 					}
 					&:after {
-						border-top-color: #bd1f44;
+						border-top-color: $color-red;
 					}
 				}
 			}
