@@ -13,6 +13,7 @@ var paths = {
   sass: './src/sass/',
   css: './public/css/',
   js: './public/js/',
+  assets: './public/assets/images',
   data: './src/_data/'
 };
 
@@ -67,10 +68,20 @@ gulp.task('js', function() {
     }));
 });
 
+gulp.task('assets', function() {
+  return gulp
+    .src('./src/assets/images/*')
+    .pipe(gulp.dest(paths.assets))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
+
 gulp.task('watch', function () {
   gulp.watch(paths.sass + '**/*.scss', ['sass']);
   gulp.watch('./src/**/*.pug', ['rebuild']);
   gulp.watch("./src/js/*.js", ['js']);
+  gulp.watch("./src/assets/images/*", ['assets']);
 });
 
 gulp.task('build', ['sass', 'pug']);
