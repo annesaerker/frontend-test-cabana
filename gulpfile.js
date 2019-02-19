@@ -34,7 +34,7 @@ gulp.task('rebuild', ['pug'], function () {
   browserSync.reload();
 });
 
-gulp.task('browser-sync', ['sass', 'pug', 'js'], function () {
+gulp.task('browser-sync', ['sass', 'pug', 'js', 'assets'], function () {
   browserSync({
     server: {
       baseDir: paths.public
