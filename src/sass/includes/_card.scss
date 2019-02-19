@@ -6,32 +6,7 @@
     margin-bottom: 70px;
   }
 
-  a {
-    &:hover {
-      .overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        opacity: 0.20;
-        z-index: 1;
-        background-color: $color-black;
-        transition: background-color .3s cubic-bezier(.5, .0, .5, 1);
-      }
-    }
-  }
-
-  .overlay {
-    transition: background-color .3s cubic-bezier(.5, .0, .5, 1);
-  }
-
-  img {
-    width: 100%;
-    border: 0;
-    display: block;
-    object-fit: cover;
-  }
-
-  .img-overlay {
+  .card__image {
     width: 100%;
     position: relative;
 
@@ -50,7 +25,32 @@
     }
   }
 
-  .card-text {
+  a {
+    &:hover {
+      .card__image--overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.20;
+        z-index: 1;
+        background-color: $color-black;
+        transition: background-color 0.25s ease-in-out;
+      }
+    }
+  }
+
+  .card__image--overlay {
+    transition: background-color 0.25s ease-in-out;
+  }
+
+  img {
+    width: 100%;
+    border: 0;
+    display: block;
+    object-fit: cover;
+  }
+
+  .card__text  {
     padding-top: 20px;
     margin-left: 40px;
   }
@@ -59,12 +59,12 @@
     margin-left: 40px;
   }
 
-  .img-lg {
+  .card__image--lg {
     position: relative;
 
-
-    .img-xs {
+    .card__image--flag {
       position: absolute;
+      z-index: 10;
       bottom: -7px;
       right: 25px;
       height: 20%;
@@ -79,15 +79,9 @@
         border-radius: 50%;
         width: 100%;
       }
-  
     }
-
   }
-
-
 }
-
-
 
 .cards {
   display: flex;

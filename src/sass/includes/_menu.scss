@@ -82,7 +82,7 @@ nav {
 
   .navbar-nav {
     position: absolute;
-    right: 325px;
+    right: 341px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -91,6 +91,10 @@ nav {
       flex-direction: column;
       right: 0;
       height: auto;
+    }
+
+    @media (min-width: 992px) and (max-width: 1150px) {
+      display: none !important;
     }
 
     .btn{
@@ -104,7 +108,6 @@ nav {
       color: #000000;
       font-size: 16px;
       line-height: 24px;
-
     }
   }
 
@@ -170,33 +173,91 @@ nav {
     text-transform: uppercase;
   }
 
+}
 
+.burger {
+  position: absolute;
+  right: 30px;
+  top: 5px;
 
-  .burger {
+  .burger-line {
+    background-color: $color-grey-blue;
+    height: 2px;
+    width: 30px;
     position: absolute;
-    right: 30px;
-    top: 5px;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+    transition: transform .15s $aniease;
+
+    &:nth-child(1) {
+      transform: translateY(0);
+    }
+
+    &:nth-child(2) {
+      transform: translateX(0) translateY(9px) scaleX(0.7);
+    }
+
+    &:nth-child(3) {
+      transform: translateX(0) translateY(18px) scaleX(0.5);
+    }
+  }
+}
+
+.search-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 0;
+  transform: translateY(100%);
+  opacity: 0.75;
+  background-color: $color-black;
+  transition: all 0.25s;
+
+  .search-input {
+    width: 100%;
+    height: 100%;
+    padding-left: 20%;
+    border: 0;
+    background-color: transparent;
+    opacity: 0;
+    color: #fff;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.show {
+  .search-box {
+    max-height: 100px;
+    .search-input {
+      opacity: 1;
+    }
+  }
+}
+
+.navbar-toggler {
+  right: 30px !important;
+  border: none;
+  display: flex;
+  height: 33px;
+  width: 32px;
+  border-radius: 0 !important;
+  border: 0 !important;
+  border-color: transparent;
+
+  &:hover {
 
     .burger-line {
-      background-color: $color-grey-blue;
-      height: 2px;
-      width: 30px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform-origin: 0 0;
-      transition: transform .15s $aniease;
-
-      &:nth-child(1) {
-        transform: translateY(0);
-      }
-
       &:nth-child(2) {
-        transform: translateX(0) translateY(9px) scaleX(0.7);
+        transform: translateX(0) translateY(9px) scaleX(1);
       }
-
       &:nth-child(3) {
-        transform: translateX(0) translateY(18px) scaleX(0.5);
+        transform: translateX(0) translateY(18px) scaleX(1);
       }
     }
   }

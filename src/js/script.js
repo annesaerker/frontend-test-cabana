@@ -13,6 +13,15 @@ $(document).ready(function() {
   $('.dropdown').on('click', function(){
     $(this).addClass('line');
   });
+
+  $('.collapse').on('click', '.search-toggle', function(e) {
+    var selector = $(this).data('selector');
+  
+    $('.collapse').toggleClass('show').find('.search-input').focus();
+    $(this).toggleClass('active');
+  
+    e.preventDefault();
+  });
 });
 
 

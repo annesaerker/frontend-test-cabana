@@ -3,12 +3,13 @@ include ../_mixins/mixin-secondary-button
 mixin lang-card(cardTitle, text)
   .card
     a(href="")
-      .img-overlay 
-      .img-lg
-        img(src="https://images.unsplash.com/photo-1549987506-72e5fcb6163c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1653&q=80" alt="placeholder")
-        .img-xs
-          img(src="https://d1atnax1kj6atg.cloudfront.net/wp-content/uploads/2014/11/USflag-circle-300x300.png" alt="placeholder")
-      .card-text 
+      .card__image
+        .card__image--overlay
+        .card__image--lg
+          img(src="https://images.unsplash.com/photo-1549987506-72e5fcb6163c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1653&q=80" alt="placeholder")
+          .card__image--flag
+            img(src="https://d1atnax1kj6atg.cloudfront.net/wp-content/uploads/2014/11/USflag-circle-300x300.png" alt="placeholder")
+      .card__text 
         h2= cardTitle
 
         if text
